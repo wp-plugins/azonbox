@@ -97,7 +97,7 @@ a.ce-heading-right {
 
 h3.ce-right-h3 {
         color: #336982;
-  font-size: 17px !important;
+  font-size: 19px !important;
   padding: 0 !important;
   margin: 0 !important;
   line-height: 1.1 !important;
@@ -105,24 +105,29 @@ h3.ce-right-h3 {
 }
 
 p.ce-right-link {
-      color: crimson;
-  font-size: 14px !important;
+    color: crimson;
+  font-size: 15px !important;
   padding-top: 0px !important;
   margin-top: 2px !important;
-  margin-bottom: 7px !important;
-  line-height: 1.1 !important;
+  margin-bottom: 0px !important;
+  line-height: 1.4 !important;
+  padding-bottom: 5px;
+  font-weight: 700;
 }
 
 p.ce-text-right {
-     font-size: 15px !important;
+     font-size: 17px !important;
   line-height: 1.4 !important;
   margin-bottom: 0px !important;
 }
 
-.ce-content-full{
+div.ce-content-full{
 width: 100% !important;
   float: left !important;
   margin-left: 5px !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 0px !important;
 }
 
 .ce-inner-left-2{
