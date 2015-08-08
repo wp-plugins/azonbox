@@ -3,8 +3,8 @@ Contributors: shohag121, marketever,
 Donate link: http://coderexpo.com/donate/
 Tags: Amazon, AzonBox, Content Box, Amazon Box, Affiliate, Azon,
 Requires at least: 3.9.0
-Tested up to: 4.2.2
-Stable tag: 1.0.1
+Tested up to: 4.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

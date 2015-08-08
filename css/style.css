@@ -6,6 +6,7 @@ border-left: 1px solid #666;
   padding: 15px !important;
   padding-right: 5px !important;
   max-width: 100%;
+  padding-bottom: 3px !important;
 }
 
 div.ce-inner-left {
@@ -32,7 +33,7 @@ p.ce-tag-para {
   margin: -1px 0 0 !important;
   display: block;
   text-align: center;
-  background-color: #FFBA13;
+  background-color: rgba(255, 186, 19, 0.44);
   height: 24px;
   font-size: 13px !important;
   color: #000 !important;
@@ -77,6 +78,8 @@ a.ce-button {
 a.ce-button:hover {
     background-color: #ED2F2F;
     color: #fff !important;
+	border-bottom: 4px solid #860303;
+    border-radius: 4px;
 }
 
 a.ce-button:visited {
@@ -84,7 +87,7 @@ a.ce-button:visited {
 }
 
 div.ce-inner-right  {
-	width: 210px;
+	width: 185px;
   float: left;
   padding: 7px !important;
   padding-right: 0px !important;
@@ -152,11 +155,13 @@ margin-top: 7px;
   max-width: 100% !important;
   border-radius: 3px;
 }
-.ce-button-fix{
+
+.ce-button-fix {
   text-align: center !important;
   display: block;
-  margin: 25px 10px !important;
+  margin: 50px 10px 15px !important;
 }
+
 h3.ce-heading-3{
 text-align: center !important;
 font-size:25px !important;
@@ -164,4 +169,21 @@ font-size:25px !important;
 
 .ce-right-para-3{
 text-align: center !important;
+}
+a.cebutton-3{ 
+font-size: 20px !important;
+}
+
+img.ce-inn-img-3 {
+  border: 1px solid #E4E4E4;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+img.ce-box-img-2{
+  border-radius: 2px;
+  box-shadow: 2px 2px 6px #716E6E;
+}
+.ce-text-align-right{
+text-align: right !important;
 }

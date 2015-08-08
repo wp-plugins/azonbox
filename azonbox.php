@@ -4,7 +4,7 @@
 Plugin Name: AzonBox
 Plugin URI:  https://wordpress.org/plugins/azonbox/
 Description: Add custom content box for amazon product to your post or page using Editor button.
-Version:     1.0.1
+Version:     1.0.4
 Author:      Marketever
 Author URI:  http://marketever.com
 License:     GPL2
@@ -26,7 +26,16 @@ function ce_content_box_shortcodes_mce_css() {
 }
 add_action( 'admin_enqueue_scripts', 'ce_content_box_shortcodes_mce_css' );
 
-
+/*
+ * making values global to use in shortcode.
+ */
+$titlecolor  = '';
+$secondtitle = '';
+if(get_option('azonbox_option_name')){
+	$azonboxop = get_option('azonbox_option_name');
+	$titlecolor  = $azonboxop['title_color'];
+	$secondtitle = $azonboxop['second_title'];
+}
 
 
 /*
@@ -47,6 +56,9 @@ function ce_content_box1_shortcode($atts) {
 			'text' => 'a great discreaption on a featured product. just think about it.',
 	), $atts );
 	
+	global $titlecolor;
+	global $secondtitle;
+	
 	ob_start();
 	
 	?>
@@ -64,8 +76,8 @@ function ce_content_box1_shortcode($atts) {
 		</div>
 		<div class="ce-inner-right">
 			<a href="<?php echo wp_kses_post( $ce_atts[ 'linkl' ] )  ; ?>" class="ce-heading-right">
-				<h3 class="ce-right-h3"><?php echo wp_kses_post( $ce_atts[ 'headline' ] ) ; ?></h3>
-				<p class="ce-right-link"><?php echo wp_kses_post( $ce_atts[ 'subhline' ] )  ; ?></p>
+				<h3 class="ce-right-h3" style="color:<?php echo $titlecolor; ?>;"><?php echo wp_kses_post( $ce_atts[ 'headline' ] ) ; ?></h3>
+				<p class="ce-right-link" style="color:<?php echo $secondtitle; ?>;"><?php echo wp_kses_post( $ce_atts[ 'subhline' ] )  ; ?></p>
 			</a>
 			<p class="ce-text-right"><?php echo wp_kses_post( $ce_atts[ 'text' ] )  ; ?></p>
 		</div>
@@ -92,6 +104,9 @@ function ce_content_box2_shortcode($atts) {
 			'subhline' => 'text is awesome and gorgious',
 			'text' => 'a great discreaption on a featured product. just think about it.',
 	), $atts );
+	
+	global $titlecolor;
+	global $secondtitle;
 
 	ob_start();
 
@@ -101,17 +116,17 @@ function ce_content_box2_shortcode($atts) {
 		<div class="ce-inner-left ce-inner-left-2">
 			
 			<a href="<?php echo wp_kses_post( $ce_atts[ 'linkl' ] ); ?>" class="ce-img-link">
-				<img src="<?php echo wp_kses_post( $ce_atts[ 'imgurl' ] ) ; ?>" alt="product" class="ce-inn-img">
+				<img src="<?php echo wp_kses_post( $ce_atts[ 'imgurl' ] ) ; ?>" alt="product" class="ce-inn-img ce-box-img-2">
 			</a>
 			
 			
 		</div>
 		<div class="ce-inner-right ce-inner-right-2">
 			<a href="<?php echo wp_kses_post( $ce_atts[ 'linkl' ] )  ; ?>" class="ce-heading-right">
-				<h3 class="ce-right-h3"><?php echo wp_kses_post( $ce_atts[ 'headline' ] ) ; ?></h3>
-				<p class="ce-right-link"><?php echo wp_kses_post( $ce_atts[ 'subhline' ] )  ; ?></p>
+				<h3 class="ce-right-h3 ce-text-align-right" style="color:<?php echo $titlecolor; ?>;"><?php echo wp_kses_post( $ce_atts[ 'headline' ] ) ; ?></h3>
+				<p class="ce-right-link ce-text-align-right" style="color:<?php echo $secondtitle; ?>;"><?php echo wp_kses_post( $ce_atts[ 'subhline' ] )  ; ?></p>
 			</a>
-			<p class="ce-text-right"><?php echo wp_kses_post( $ce_atts[ 'text' ] )  ; ?></p>
+			<p class="ce-text-right ce-text-align-right"><?php echo wp_kses_post( $ce_atts[ 'text' ] )  ; ?></p>
 			<a href="<?php echo  wp_kses_post( $ce_atts[ 'linkl' ] ) ; ?>" class="ce-button ce-button-2"><?php echo wp_kses_post( $ce_atts[ 'lnktxt' ] )  ; ?></a>
 			<p class="ce-img-disc"><?php echo wp_kses_post( $ce_atts[ 'imgdsc' ] ) ; ?></p>
 		</div>
@@ -139,6 +154,9 @@ function ce_content_box3_shortcode($atts) {
 			'subhline' => 'text is awesome and gorgious',
 			
 	), $atts );
+	
+	global $titlecolor;
+	global $secondtitle;
 
 	ob_start();
 
@@ -148,18 +166,18 @@ function ce_content_box3_shortcode($atts) {
 		<div class="ce-inner-left ce-inner-right-2">
 			
 			<a href="<?php echo wp_kses_post( $ce_atts[ 'linkl' ] ); ?>" class="ce-img-link">
-				<img src="<?php echo wp_kses_post( $ce_atts[ 'imgurl' ] ) ; ?>" alt="product" class="ce-inn-img">
+				<img src="<?php echo wp_kses_post( $ce_atts[ 'imgurl' ] ) ; ?>" alt="product" class="ce-inn-img ce-inn-img-3">
 			</a>
 			
 			
 		</div>
 		<div class="ce-inner-right ce-inner-left-2">
 			<a href="<?php echo wp_kses_post( $ce_atts[ 'linkl' ] )  ; ?>" class="ce-heading-right">
-				<h3 class="ce-right-h3 ce-heading-3"><?php echo wp_kses_post( $ce_atts[ 'headline' ] ) ; ?></h3>
-				<p class="ce-right-link ce-right-para-3"><?php echo wp_kses_post( $ce_atts[ 'subhline' ] )  ; ?></p>
+				<h3 class="ce-right-h3 ce-heading-3" style="color:<?php echo $titlecolor; ?>;"><?php echo wp_kses_post( $ce_atts[ 'headline' ] ) ; ?></h3>
+				<p class="ce-right-link ce-right-para-3" style="color:<?php echo $secondtitle; ?>;"><?php echo wp_kses_post( $ce_atts[ 'subhline' ] )  ; ?></p>
 			</a>
 			<p class="ce-text-right"><?php echo wp_kses_post( $ce_atts[ 'text' ] )  ; ?></p>
-			<p class="ce-button-fix"> <a href="<?php echo  wp_kses_post( $ce_atts[ 'linkl' ] ) ; ?>" class="ce-button"><?php echo wp_kses_post( $ce_atts[ 'lnktxt' ] )  ; ?></a></p>
+			<p class="ce-button-fix"> <a href="<?php echo  wp_kses_post( $ce_atts[ 'linkl' ] ) ; ?>" class="ce-button cebutton-3"><?php echo wp_kses_post( $ce_atts[ 'lnktxt' ] )  ; ?></a></p>
 			<p class="ce-img-disc"><?php echo wp_kses_post( $ce_atts[ 'imgdsc' ] ) ; ?></p>
 		</div>
 		<div class="ce-clear-fix"></div>
@@ -211,3 +229,163 @@ function ce_content_boxregister_mce_button( $buttons ) {
 	return $buttons;
 }
 
+/* 
+ * Settings Page class
+ */
+  
+
+class AzonboxSettingsPage
+{
+	/**
+	 * Holds the values to be used in the fields callbacks
+	 */
+	private $options;
+
+	/**
+	 * Start up
+	 */
+	public function __construct()
+	{
+		add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
+		add_action( 'admin_init', array( $this, 'page_init' ) );
+	}
+
+	/**
+	 * Add options page
+	 */
+	public function add_plugin_page()
+	{
+		
+		// This page will be under "Settings"
+		
+		add_menu_page( 
+				'AzonBox Settings', 
+				'AzonBox', 
+				'manage_options', 
+				'azonbox_settings', 
+				array( $this, 'create_admin_page' ), 
+				plugins_url( '/img/iconbox.jpg', __FILE__ ), 
+				79
+		);
+	}
+
+	/**
+	 * Options page callback
+	 */
+	public function create_admin_page()
+	{
+		// Set class property
+		$this->options = get_option( 'azonbox_option_name' );
+		?>
+        <div class="wrap">
+            <h2>AzonBox Settings</h2>           
+            <form method="post" action="options.php">
+            <?php
+                // This prints out all hidden setting fields
+                settings_fields( 'azonbox_option_group' );   
+                do_settings_sections( 'azonbox-setting-admin' );
+                submit_button(); 
+            ?>
+            </form>
+        </div>
+        <?php
+    }
+
+    /**
+     * Register and add settings
+     */
+    public function page_init()
+    {        
+        register_setting(
+            'azonbox_option_group', // Option group
+            'azonbox_option_name', // Option name
+            array( $this, 'sanitize' ) // Sanitize
+        );
+
+        add_settings_section(
+            'azonbox_setting_section_color', // ID
+            'AzonBox Color Settings', // Title
+            array( $this, 'print_section_info' ), // Callback
+            'azonbox-setting-admin' // Page
+        );  
+
+        add_settings_field(
+            'title_color', // ID
+            'Title Color', // Title 
+            array( $this, 'id_number_callback' ), // Callback
+            'azonbox-setting-admin', // Page
+            'azonbox_setting_section_color' // Section           
+        );      
+
+        add_settings_field(
+            'second_title', 
+            'Subtitle Color', 
+            array( $this, 'title_callback' ), 
+            'azonbox-setting-admin', 
+            'azonbox_setting_section_color'
+        );      
+    }
+
+    /**
+     * Sanitize each setting field as needed
+     *
+     * @param array $input Contains all settings fields as array keys
+     */
+    public function sanitize( $input )
+    {
+        $new_input = array();
+        if( isset( $input['title_color'] ) )
+            $new_input['title_color'] = sanitize_text_field( $input['title_color'] );
+
+        if( isset( $input['second_title'] ) )
+            $new_input['second_title'] = sanitize_text_field( $input['second_title'] );
+
+        return $new_input;
+    }
+
+    /** 
+     * Print the Section text
+     */
+    public function print_section_info()
+    {
+        print 'Pick your colors below:';
+    }
+
+    /** 
+     * Get the settings option array and print one of its values
+     */
+    public function id_number_callback()
+    {
+        printf(
+            '<input type="text" id="title_color" name="azonbox_option_name[title_color]" value="%s" class="azonbox-color-field" data-default-color="#336982" />',
+            isset( $this->options['title_color'] ) ? esc_attr( $this->options['title_color']) : ''
+        );
+    }
+
+    /** 
+     * Get the settings option array and print one of its values
+     */
+    public function title_callback()
+    {
+        printf(
+            '<input type="text" id="second_title" name="azonbox_option_name[second_title]" value="%s" class="azonbox-color-field" data-default-color="#ED143D" />',
+            isset( $this->options['second_title'] ) ? esc_attr( $this->options['second_title']) : ''
+        );
+    }
+}
+
+if( is_admin() )
+    $azonbox_settings_page = new AzonboxSettingsPage();
+
+/*
+ * color picker optation
+ * 
+ */
+
+add_action( 'admin_enqueue_scripts', 'azonbox_enqueue_color_picker' );
+function azonbox_enqueue_color_picker( $azonbox ) {
+	// first check that $hook_suffix is appropriate for your admin page
+	wp_enqueue_style( 'wp-color-picker' );
+	wp_enqueue_script( 'azonbox-cp-script', plugins_url('js/cp-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+}
+ 
