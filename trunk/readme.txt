@@ -8,7 +8,7 @@ Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Azonbox will enable you to add beautiful call to action box on your website. The pre-designed call to action box increase your conversion rate up to 25%!
+Azonbox will enable you to add beautiful call to action box on your website. The pre-designed call to action box increase conversion rate up to 25%!
 
 
 == Description ==
