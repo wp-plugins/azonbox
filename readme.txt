@@ -13,13 +13,19 @@ Azonbox will enable you to add beautiful call to action box on your website. The
 
 == Description ==
 It doesn't matter how much traffic you are getting to your niche website; you won't make a good amount until you are getting a good conversion rate.
-As a niche website builder, I know this brutal truth. While working on my site, I had to find some ways that can increase my overall conversion rate from niche website (visitor click to Amazon affiliate links).
-While researching, I found visitors click more on image based / graphical call to action, so I developed my own plugin to implement this technique to my niche website.
+As a niche website builder, I know this brutal truth. 
+
+While working on my site, I had to find some ways that can increase my overall conversion rate from niche website (visitor click to Amazon affiliate links).
+
+During my research, I found visitors click more on image based / graphical call to action, so I developed my own plugin to implement this technique to my niche website.
 
 = Features =
 
-AzonBox is developed for all Amazon affiliate marketers to increase the conversion rate. This simple plugin will allow you to add 3 types of call to action box with multiple images.
+AzonBox is developed for all Amazon affiliate marketers to increase the conversion rate. 
+
+This simple plugin will allow you to add 3 types of call to action box with multiple images.
 AzonBox comes with 3 basic layout of call to action by default, and more on its' way.
+
 During my initial test with a niche website, this plugin increased `20%` conversion rate.
 
 = Feedback and Support =
