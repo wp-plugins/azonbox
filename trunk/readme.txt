@@ -1,26 +1,28 @@
 === AzonBox ===
 Contributors: shohag121, marketever, 
 Donate link: http://coderexpo.com/donate/
-Tags: Amazon, AzonBox, Content Box, Amazon Box, Affiliate, Azon,
+Tags: Amazon Affiliate, Affiliate Marketing, Call To Action, Conversion Rate Optimization, AzonBox,
 Requires at least: 3.9.0
 Tested up to: 4.3
 Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Plugin will add a killer content box with your amazon affiliate link and text with image in the post or page.
+Azonbox will enable you to add beautiful call to action box on your website. The pre-designed call to action box increase your conversion rate up to 25%!
+
 
 == Description ==
-It doesn’t matter how much traffic you are getting to your niche website; you won’t make a good amount until you are getting a good conversion rate.
+It doesn't matter how much traffic you are getting to your niche website; you won't make a good amount until you are getting a good conversion rate.
 As a niche website builder, I know this brutal truth. While working on my site, I had to find some ways that can increase my overall conversion rate from niche website (visitor click to Amazon affiliate links).
 While researching, I found visitors click more on image based / graphical call to action, so I developed my own plugin to implement this technique to my niche website.
 
-=Features=
+= Features =
+
 AzonBox is developed for all Amazon affiliate marketers to increase the conversion rate. This simple plugin will allow you to add 3 types of call to action box with multiple images.
-AzonBox comes with 3 basic layout of call to action by default, and more on its’ way.
+AzonBox comes with 3 basic layout of call to action by default, and more on its' way.
 During my initial test with a niche website, this plugin increased `20%` conversion rate.
 
-=Feedback and Support=
+= Feedback and Support =
 If you have any suggestion, or need any support, visit [Marketever](https://marketever.com/ "Marketever.com") and contact me.
 
 
@@ -47,10 +49,18 @@ Azonbox is Compatible to WordPress 3.9.1+
 
 You can add the box with editor Button called `AzonBox`.
 
+= Is it compatable to all theme? =
+Yes it is. If not contact at `hello at marketever dot com`
+
 == Screenshots ==
 
 
 == Changelog ==
+= 1.0.4 =
+* Minor Bug Fixed
+* UI Improved
+
+
 = 1.0.3 =
 * Minor Bug Fixed
 * New template added
