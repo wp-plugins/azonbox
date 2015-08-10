@@ -4,7 +4,7 @@
 Plugin Name: AzonBox
 Plugin URI:  https://wordpress.org/plugins/azonbox/
 Description: Add custom content box for Amazon product to your post or page using Editor button.
-Version:     1.0.5
+Version:     1.0.6
 Author:      Marketever
 Author URI:  http://marketever.com
 License:     GPL2
@@ -389,3 +389,15 @@ function azonbox_enqueue_color_picker( $azonbox ) {
 	wp_enqueue_script( 'azonbox-cp-script', plugins_url('js/cp-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 }
  
+ /*
+  * Settings link from plugin page
+  */
+  
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'azonbox_settings_link' );
+
+function azonbox_settings_link ( $links ) {
+ $mylinks = array(
+ '<a href="' . admin_url( 'admin.php?page=azonbox_settings' ) . '">Settings</a>',
+ );
+return array_merge( $links, $mylinks );
+}
