@@ -3,8 +3,8 @@
 /*
 Plugin Name: AzonBox
 Plugin URI:  https://wordpress.org/plugins/azonbox/
-Description: Add custom content box for amazon product to your post or page using Editor button.
-Version:     1.0.4
+Description: Add custom content box for Amazon product to your post or page using Editor button.
+Version:     1.0.5
 Author:      Marketever
 Author URI:  http://marketever.com
 License:     GPL2

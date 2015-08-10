@@ -61,6 +61,10 @@ Yes it is. If not contact at `hello at marketever dot com`
 
 
 == Changelog ==
+= 1.0.5 =
+* Bug Fixed
+
+
 = 1.0.4 =
 * Minor Bug Fixed
 * UI Improved
