@@ -39,7 +39,6 @@ If you have any suggestion, or need any support, visit [Marketever](https://mark
 
 This section describes how to install the plugin and get it working.
 
-e.g.
 
 1. Upload `azonbox` directory to the `/wp-content/plugins/` directory 
 2. Activate the plugin through the 'Plugins' menu in WordPress
