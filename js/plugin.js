@@ -23,7 +23,7 @@
 								},{
 									type: 'textbox',
 									name: 'imgdisc',
-									label: 'Image Disc',
+									label: 'Image Description',
 									value: ''
 								},{
 									type: 'textbox',
